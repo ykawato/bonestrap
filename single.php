@@ -1,36 +1,48 @@
 <?php get_header(); ?>
 
-			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
 
-					<div id="main" class="eightcol first clearfix" role="main">
+      <div class="row ">
 
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <div class="col-xs-12 col-sm-9">
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								<header class="article-header">
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-									<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
-									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&amp;</span> filed under %4$s.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', ') );
-									?></p>
 
-								</header> <!-- end article header -->
+          <div class="jumbotron">
+            <h1><?php the_title(); ?></h1>
+            <p class="byline vcard"><?php
+                printf( __( '<time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>.  %4$s', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', ') );
+            ?></p>
+
+          </div>
 
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
 								</section> <!-- end article section -->
 
-								<footer class="article-footer">
-									<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 
-								</footer> <!-- end article footer -->
 
-								<?php comments_template(); ?>
+<!-- コメント -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseComment">
+          コメント ( <?php comments_number( '0', '1', '%' ); ?> 件)
+        </a>
+      </h4>
+    </div>
+    <div id="collapseComment" class="panel-collapse collapse">
+      <div class="panel-body">
+        <?php comments_template(); ?>
 
-							</article> <!-- end article -->
+
+      </div>
+    </div>
+  </div>
+
+
 
 						<?php endwhile; ?>
 
@@ -50,12 +62,10 @@
 
 						<?php endif; ?>
 
-					</div> <!-- end #main -->
 
-					<?php get_sidebar(); ?>
+        </div><!--/span-->
+						<?php get_sidebar(); ?>
 
-				</div> <!-- end #inner-content -->
 
-			</div> <!-- end #content -->
-
+    </div><!--/row-->
 <?php get_footer(); ?>

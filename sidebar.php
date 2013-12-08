@@ -1,4 +1,5 @@
-				<div id="sidebar1" class="sidebar fourcol last clearfix" role="complementary">
+        <div class="col-xs-12 col-sm-3 " id="sidebar" role="navigation">
+          <div class="well sidebar-nav">
 
 					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 
@@ -14,4 +15,6 @@
 
 					<?php endif; ?>
 
-				</div>
+          </div><!--/.well -->
+
+        </div><!--/span-->
