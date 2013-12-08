@@ -11,7 +11,15 @@
 		<!-- Google Chrome Frame for IE -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title><?php wp_title(''); ?></title>
+        <title><?php
+        global $page, $paged;
+        wp_title( '-', true, 'right' );
+        // Add the blog name.
+        bloginfo( 'name' );
+        // Add a page number if necessary:
+        if ( $paged >= 2 || $page >= 2 )
+            echo ' - ' . sprintf( 'ページ %s', max( $paged, $page ) );
+        ?></title>
 
 		<!-- mobile meta (hooray!) -->
 		<meta name="HandheldFriendly" content="True">
