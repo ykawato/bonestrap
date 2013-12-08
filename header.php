@@ -18,7 +18,7 @@
         bloginfo( 'name' );
         // Add a page number if necessary:
         if ( $paged >= 2 || $page >= 2 )
-            echo ' - ' . sprintf( 'ページ %s', max( $paged, $page ) );
+            echo ' - ' . sprintf( 'ページ %s', max( $paged, $page ) );
         ?></title>
 
 		<!-- mobile meta (hooray!) -->
