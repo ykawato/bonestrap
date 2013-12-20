@@ -19,6 +19,11 @@
                             <span><?php _e( 'Posts Tagged:', 'bonestheme' ); ?></span> <?php single_tag_title(); ?>
                     </h1>
 
+            <?php } elseif (is_post_type_archive()) { ?>
+                    <h1 class="archive-title h2">
+                            <span><?php _e( 'Archives:', 'bonestheme' ); ?></span> <?php post_type_archive_title(); ?>
+                    </h1>
+
             <?php } elseif (is_author()) {
                 global $post;
                 $author_id = $post->post_author;
@@ -59,7 +64,7 @@
 
       <div class="row ">
 
-        <div class="col-lg-9 col-md-9 col-xs-12 col-sm-9">
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
 
 
 

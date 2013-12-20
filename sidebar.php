@@ -1,4 +1,4 @@
-        <div class="col-xs-12 col-sm-3 " id="sidebar" role="navigation">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="sidebar" role="navigation">
           <div class="well sidebar-nav">
 
 					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
