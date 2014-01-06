@@ -2,7 +2,7 @@
 
       <div class="row ">
 
-        <div class="col-xs-12 col-sm-9">
+        <div class="col-lg-9 col-md-9 col-xs-12 col-sm-9">
 
 						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 

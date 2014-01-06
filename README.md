@@ -5,4 +5,4 @@ Bones designed by **Eddie Machado**: http://themble.com/bones
 
 
 ## How
-Upload bootstrap files as 'assets' in your WP root directory.
+Download twtter bootstrap files (http://getbootstrap.com/) and upload them as 'assets' (rename from 'dist') in your WP root directory.
