@@ -153,12 +153,18 @@ function bones_comments( $comment, $args, $depth ) {
 
 // Search Form
 function bones_wpsearch($form) {
-	$form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-	<label class="screen-reader-text" for="s">' . __( 'Search for:', 'bonestheme' ) . '</label>
-	<input type="text" class="form-control" value="' . get_search_query() . '" name="s" id="s" placeholder="' . esc_attr__( 'Search the Site...', 'bonestheme' ) . '" />
-	<input type="submit" class="btn btn-default" id="searchsubmit" value="' . esc_attr__( 'Search' ) .'" />
-	</form>';
+	$form = '
+            <form class="navbar-form" role="search" method="get" id="searchform" action="' . home_url( '/' ) . '">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="サイト内検索" value="' . get_search_query() . '" name="s" id="s" >
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+	';
 	return $form;
+	
 } // don't remove this bracket!
 
 
