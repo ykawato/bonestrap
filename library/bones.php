@@ -35,6 +35,12 @@ function bones_ahoy() {
     // enqueue base scripts and styles
     add_action( 'wp_enqueue_scripts', 'bones_scripts_and_styles', 999 );
     // ie conditional wrapper
+    add_action( 'wp_head', function() {
+       echo '<!--[if lt IE 9]>
+            <script src="' . get_template_directory_uri() . '/library/js/respond.min.js"></script>
+            <script src="' . get_template_directory_uri() . '/library/js/html5shiv.js"></script>
+        <![endif]-->';
+    },10 );
 
     // launching this stuff after theme setup
     bones_theme_support();
