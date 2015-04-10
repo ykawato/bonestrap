@@ -103,7 +103,7 @@ The comments page for Bones
 	<p><textarea name="comment" id="comment" placeholder="<?php _e( 'Your Comment here...', 'bonestheme' ); ?>" tabindex="4" class="form-control" rows="3"></textarea></p>
 
 	<p>
-		<input name="submit" type="submit" id="submit" class="button" tabindex="5" value="<?php _e( 'Submit', 'bonestheme' ); ?>" />
+		<input name="submit" type="submit" id="submit" class="btn btn-default" tabindex="5" value="<?php _e( 'Submit', 'bonestheme' ); ?>" />
 		<?php comment_id_fields(); ?>
 	</p>
 
